@@ -1,0 +1,26 @@
+<div class="nav-bar">
+    <div class="dropdown">
+        <button class="nav-anchor">AUCTIONS<i class="large material-icons">arrow_drop_down</i></button>
+        <div class="dropdown-content">
+            <a href="" class="nav-anchor">Arts</a>
+            <a href="#" class="nav-anchor">Literatures</a>
+            <a href="#" class="nav-anchor">Watches</a>
+            <a href="#" class="nav-anchor">Wines</a>
+        </div>
+    </div>
+
+    <div class="nav-menu">
+        <a href="auction" class="nav-anchor">HOME</a>
+        <span style="display: inline-block; border-width: 0 0 0 1px; border-style: solid; padding-left: 10px;">
+        <a href="/" class="nav-anchor">SALE CALENDAR</a>
+        <span style="display: inline-block; border-width: 0 0 0 1px; border-style: solid; padding-left: 10px;">
+        <% if (user) { %>
+        <a href="" class="nav-anchor" onclick="$('<form method=POST action=/logout>').submit();return false">
+            SIGN OUT
+        </a>
+        <span style="display: inline-block; border-width: 0 0 0 1px; border-style: solid; padding-left: 10px;">
+        <% } else { %>
+        <a href="/login" class="nav-anchor">SIGN IN</a>
+        <% } %>
+    </div>
+</div>

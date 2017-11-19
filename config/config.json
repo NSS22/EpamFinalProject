@@ -1,0 +1,13 @@
+{
+  "port": 3000,
+  "mongoose": "mongodb://user:password@ds015929.mlab.com:15929/heroku_z7ps4m2q",
+  "session": {
+    "secret": "KillerIsJim",
+    "key": "sid",
+    "cookie": {
+      "path": "/",
+      "httpOnly": true,
+      "maxAge": null
+    }
+  }
+}

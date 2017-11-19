@@ -1,0 +1,219 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media screen and (max-width: 768px) {
+
+}
+/////////////////////////////////////////////BODY///////////////////////////////////////////////////////////////////////
+@media screen and (min-width: 1200px) {
+  body * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    position: relative;
+    padding: 10px;
+    background: url("/images/body_img.jpg") no-repeat center scroll;
+    background-size: cover;
+  }
+  //////////////////////////////////////////////HEADER//////////////////////////////////////////////////////////////////
+  header {
+    height: 25vh;
+    width: 100%;
+    text-align: center;
+    opacity: .75;
+
+    .header-content {
+      display: inline-block;
+      width: 45%;
+      height: 100%;
+      img {
+        height: 100%;
+      }
+      video {
+        height: 100%;
+      }
+    }
+  }
+////////////////////////////////////////NAV-BAR/////////////////////////////////////////////////////////////////////////
+  nav {
+    width: 100%;
+    height: 20vh;
+    padding: 10px 0 0 0;
+    background: linear-gradient(#0a406e, #f2f2f2);
+    box-shadow: 0 4px 4px #f2f2f2;
+    .nav-bar {
+      height: 100%;
+      .nav-menu {
+        float: right;
+        height: 100%;
+        vertical-align: middle;
+        a {
+          vertical-align: middle;
+        }
+
+      }
+      .nav-menu:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
+      a:hover {
+        color: #f2f2f2;
+        background-color: #0a406e;
+      }
+    }
+    .dropdown {
+      float: left;
+      position: relative;
+      vertical-align: middle;
+      :hover {
+        color: #f2f2f2;
+        background-color: #0a406e;
+      }
+      .dropdown-content {
+        position: absolute;
+        display: none;
+        min-width: 160px;
+        z-index: 9999;
+        a {
+          display: block;
+        }
+      }
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+      left: 3vw;
+    }
+    .dropdown::before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+  .nav-anchor {
+    margin: 0px 20px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    border: 5px solid #007897;
+    border-radius: 20px;
+  }
+  ///////////////////////////////////////////////SLIDER - GALLERY///////////////////////////////////////////////////////
+  @import url(https://fonts.googleapis.com/css?family=Istok+Web);
+  @keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+  }
+  .slider-gallery {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    margin-top: 5vh;
+    .slider {
+      position: relative;
+      width: 500%;
+      height: 100%;
+      font-size: 0;
+      animation: 30s slidy infinite;
+      figure {
+        width: 20%;
+        height: 100%;
+        display: inline-block;
+        position: inherit;
+        figcaption {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
+          background: rgba(0,0,0,0.4);
+
+          font-size: 2rem; padding: .6rem;
+        }
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  ////////////////////////////////////////////////////////GALLERY///////////////////////////////////////////////////////
+  .gallery {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      height: 60vh;
+      width: 100%;
+      .cell {
+        flex: 1;
+        margin: .1rem;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
+nav {
+  width: 100%;
+}
+
+nav a {
+
+  border-radius: 4px;
+}
+
+nav a:visited, a:link {
+  color: #607D8B;
+}
+
+nav a:hover {
+  color: #039be5;
+  background-color: #CFD8DC;
+}
+
+nav a.active {
+  color: #039be5;
+}
+
+.menu {
+  width: 240px;
+  height: 80vh;
+  position: absolute;
+  z-index: 999;
+  background: #D9C9A3;
+  left: -240px;
+  transition: all .3s ease-in-out;
+}
+
+.menu-icon {
+  padding: 10px 20px;
+  background: #E5DAC0;
+  color: #987D3E;
+  cursor: pointer;
+  float: right;
+  margin: 6px 6px 0 0;
+  border-radius: 5px;
+}
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; left: 0; }
+*/
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
